@@ -1,0 +1,72 @@
+.subTabs {
+  display: flex; gap: 4px; padding: 0 5vw;
+  border-bottom: 1px solid var(--border);
+  background: #fff; position: sticky; top: 60px; z-index: 50;
+}
+.subTab {
+  padding: 14px 18px; font-size: 14px; font-weight: 500;
+  color: var(--text-lt); cursor: pointer; white-space: nowrap;
+  border: none; background: none; font-family: inherit;
+  border-bottom: 2px solid transparent; margin-bottom: -1px; transition: .15s;
+}
+.subTab:hover { color: var(--navy); }
+.subTab.active { color: var(--navy); border-color: var(--navy); }
+.subPage { padding: 40px 5vw; }
+
+.stepsList { display: flex; flex-direction: column; }
+.stepItem {
+  display: flex; gap: 28px; padding: 28px 0;
+  border-bottom: 1px solid var(--border); cursor: pointer;
+}
+.stepItem:last-child { border-bottom: none; }
+.stepNumCol { flex-shrink: 0; width: 56px; text-align: center; }
+.stepCircle {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: var(--blue-lt); color: var(--blue);
+  font-size: 18px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; transition: .2s;
+}
+.stepItem:hover .stepCircle, .stepItem.open .stepCircle {
+  background: var(--navy); color: #fff;
+}
+.stepBody { flex: 1; }
+.stepTitle {
+  font-size: 16px; font-weight: 700; color: var(--navy);
+  margin-bottom: 4px; display: flex; justify-content: space-between; align-items: center;
+}
+.stepPreview { font-size: 13px; color: var(--text-md); }
+.stepDetail {
+  margin-top: 14px; background: var(--bg-alt);
+  border-radius: 8px; padding: 18px 20px;
+}
+.stepDetail ul { padding-left: 18px; color: var(--text-md); font-size: 13px; }
+.stepDetail ul li { margin-bottom: 8px; line-height: 1.7; }
+.stepNudge {
+  background: var(--blue-lt); border-left: 3px solid var(--blue);
+  padding: 12px 16px; border-radius: 0 8px 8px 0;
+  font-size: 13px; color: var(--navy); margin-top: 12px;
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+}
+
+.sfaqCats { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.sfaqCat {
+  padding: 6px 16px; border-radius: 20px;
+  border: 1.5px solid var(--border); background: #fff;
+  color: var(--text-md); font-size: 13px; cursor: pointer;
+  transition: .15s; font-family: inherit;
+}
+.sfaqCat.active, .sfaqCat:hover { background: var(--teal); color: #fff; border-color: var(--teal); }
+
+.serviceBox {
+  background: var(--gold-lt); border: 1px solid #f0d090;
+  border-radius: var(--r); padding: 24px 28px; margin-bottom: 32px; max-width: 700px;
+}
+.serviceBox h3 { font-size: 14px; font-weight: 700; color: #7a5200; margin-bottom: 10px; }
+.serviceBox p { font-size: 13px; color: #7a5200; line-height: 1.7; }
+
+.contactLayout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+.formCard { background: #fff; border: 1px solid var(--border); border-radius: var(--r); padding: 32px; }
+
+@media (max-width: 800px) {
+  .contactLayout { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,48 @@
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+  background: rgba(255,255,255,.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  height: 60px;
+  display: flex; align-items: center;
+  padding: 0 5vw;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex; align-items: center; gap: 9px;
+  text-decoration: none;
+}
+.logoMark {
+  width: 32px; height: 32px;
+  background: var(--navy); border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 17px; font-weight: 700;
+}
+.logoName { font-size: 14px; font-weight: 700; color: var(--navy); line-height: 1.2; }
+.logoSub { font-size: 10px; color: var(--text-lt); letter-spacing: .5px; }
+
+.links {
+  display: flex; gap: 2px; list-style: none;
+}
+.link {
+  color: var(--text-md); font-size: 13px; font-weight: 500;
+  padding: 6px 12px; border-radius: 6px;
+  transition: .15s;
+}
+.link:hover, .active {
+  color: var(--blue) !important;
+  background: var(--blue-lt);
+}
+
+.cta {
+  background: var(--navy); color: #fff;
+  font-size: 13px; font-weight: 600;
+  padding: 8px 18px; border-radius: 7px;
+  transition: .15s;
+}
+.cta:hover { background: var(--blue); }
+
+@media (max-width: 800px) {
+  .links { display: none; }
+}

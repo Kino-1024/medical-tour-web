@@ -1,0 +1,16 @@
+.bar {
+  position: fixed; top: 60px; left: 0; right: 0; z-index: 800;
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--border);
+  height: 38px;
+  display: flex; align-items: center;
+  padding: 0 5vw; gap: 8px;
+}
+.btn {
+  background: none; border: none; cursor: pointer;
+  color: var(--blue); font-size: 13px; font-weight: 500;
+  font-family: inherit; padding: 0; transition: .15s;
+}
+.btn:hover { color: var(--navy); }
+.sep { color: var(--border); font-size: 12px; }
+.crumb { font-size: 13px; color: var(--text-lt); }

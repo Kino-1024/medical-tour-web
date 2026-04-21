@@ -1,0 +1,21 @@
+.mission {
+  background: linear-gradient(150deg, #0d2744 0%, #1a3a5c 60%, #1e4d6e 100%);
+  padding: 72px 5vw;
+}
+.missionTitle { font-size: clamp(22px,3vw,36px); font-weight: 700; color: #fff; margin-bottom: 14px; }
+.missionDesc { font-size: 16px; color: rgba(255,255,255,.75); max-width: 600px; margin: 0 auto; }
+
+.valuesGrid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.teamGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr)); gap: 24px; }
+
+.compliance {
+  background: var(--bg-alt); border: 1px solid var(--border);
+  border-radius: var(--r); padding: 24px 28px;
+  max-width: 700px; margin: 0 auto;
+}
+.compliance h3 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+.compliance p { font-size: 13px; color: var(--text-md); line-height: 1.7; }
+
+@media (max-width: 800px) {
+  .valuesGrid { grid-template-columns: 1fr; }
+}

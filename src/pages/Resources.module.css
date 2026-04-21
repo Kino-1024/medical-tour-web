@@ -1,0 +1,39 @@
+.subTabs {
+  display: flex; gap: 4px; padding: 0 5vw;
+  border-bottom: 1px solid var(--border);
+  background: #fff; position: sticky; top: 60px; z-index: 50;
+  overflow-x: auto;
+}
+.subTab {
+  padding: 14px 18px; font-size: 14px; font-weight: 500;
+  color: var(--text-lt); cursor: pointer; white-space: nowrap;
+  border: none; background: none; font-family: inherit;
+  border-bottom: 2px solid transparent; margin-bottom: -1px; transition: .15s;
+}
+.subTab:hover { color: var(--navy); }
+.subTab.active { color: var(--navy); border-color: var(--navy); }
+.subPage { padding: 40px 5vw; }
+.filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; }
+.filterTag {
+  padding: 6px 16px; border-radius: 20px;
+  border: 1.5px solid var(--border); background: #fff;
+  color: var(--text-md); font-size: 13px; cursor: pointer;
+  transition: .15s; font-family: inherit;
+}
+.filterTag.active, .filterTag:hover {
+  background: var(--navy); color: #fff; border-color: var(--navy);
+}
+.newsGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap: 20px; }
+.hospitalGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px,1fr)); gap: 24px; }
+.storiesGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px,1fr)); gap: 24px; }
+.backBtn {
+  display: inline-flex; align-items: center; gap: 6px;
+  color: var(--blue); font-size: 13px; cursor: pointer;
+  margin-bottom: 24px; border: none; background: none;
+  font-family: inherit; padding: 0;
+}
+.backBtn:hover { text-decoration: underline; }
+
+@media (max-width: 800px) {
+  .subTabs { top: 60px; }
+}
