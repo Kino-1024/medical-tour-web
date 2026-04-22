@@ -43,6 +43,75 @@
 }
 .cta:hover { background: var(--blue); }
 
+/* ── Hamburger button ── */
+.hamburger {
+  display: none;
+  flex-direction: column; justify-content: center; align-items: center;
+  gap: 5px;
+  width: 36px; height: 36px;
+  background: none; border: none; cursor: pointer;
+  padding: 4px; border-radius: 6px;
+  transition: background .15s;
+}
+.hamburger:hover { background: var(--blue-lt); }
+
+.bar {
+  display: block;
+  width: 22px; height: 2px;
+  background: var(--navy); border-radius: 2px;
+  transition: transform .25s, opacity .2s;
+  transform-origin: center;
+}
+.barTop  { transform: translateY(7px) rotate(45deg); }
+.barMid  { opacity: 0; }
+.barBot  { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── Mobile drawer ── */
+.overlay {
+  position: fixed; inset: 60px 0 0 0; z-index: 800;
+  background: rgba(0,0,0,.35);
+}
+
+.drawer {
+  position: fixed; top: 60px; left: 0; right: 0; z-index: 850;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  padding: 0 5vw;
+  max-height: 0; overflow: hidden;
+  transition: max-height .3s ease, padding .3s ease;
+}
+.drawerOpen {
+  max-height: 420px;
+  padding: 16px 5vw 20px;
+}
+
+.drawerLinks {
+  list-style: none;
+  display: flex; flex-direction: column; gap: 2px;
+  margin-bottom: 16px;
+}
+.drawerLink {
+  display: block;
+  color: var(--text-md); font-size: 15px; font-weight: 500;
+  padding: 10px 14px; border-radius: 8px;
+  transition: .15s;
+}
+.drawerLink:hover, .drawerActive {
+  color: var(--blue) !important;
+  background: var(--blue-lt);
+}
+.drawerCta {
+  display: block; text-align: center;
+  background: var(--navy); color: #fff;
+  font-size: 14px; font-weight: 600;
+  padding: 11px 18px; border-radius: 8px;
+  transition: .15s;
+}
+.drawerCta:hover { background: var(--blue); }
+
+/* ── Responsive ── */
 @media (max-width: 800px) {
   .links { display: none; }
+  .ctaDesktop { display: none; }
+  .hamburger { display: flex; }
 }
